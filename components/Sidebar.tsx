@@ -9,6 +9,7 @@ import Link from 'next/link'
 import { sidebarLinks } from '@/constants'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
+import Footer from './Footer';
 
 const Sidebar = ({user} : SiderbarProps) => {
 
@@ -24,7 +25,7 @@ const Sidebar = ({user} : SiderbarProps) => {
                     alt="Horizon Logo"
                     className='size-[24px] max-xl:size-14'
                 />
-                <h1 className='sidebar-logo'>Horizon</h1>
+                <h1 className='sidebar-logo'>Bank App</h1>
             </Link>
 
 
@@ -53,7 +54,7 @@ const Sidebar = ({user} : SiderbarProps) => {
 
             USER
         </nav>
-        USER
+        <Footer user={user} />
     </section>
   )
 }
